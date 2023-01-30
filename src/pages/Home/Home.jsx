@@ -4,7 +4,7 @@ function Home() {
     return (
         <div>
             <Header />
-            <div>
+            <div className="mt-40">
                 <Slider />
             </div>
         </div>

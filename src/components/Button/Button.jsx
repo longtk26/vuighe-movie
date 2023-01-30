@@ -20,7 +20,7 @@ function Button({ path, Icon, circle, user, hover, children }) {
             {children || (
                 <Icon
                     className={`${
-                        !hover && !user ? "text-[24px]" : "text-[20px]"
+                        !hover && !user ? "text-[24px]" : "text-[16px]"
                     }`}
                 />
             )}
