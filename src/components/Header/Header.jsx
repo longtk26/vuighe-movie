@@ -16,7 +16,7 @@ function Header() {
             className="flex justify-between items-center h-[60px] shadow
                        md:py-4 md:px-14 px-1 fixed w-full left-0 right-0 top-0"
         >
-            <div className="flex items-center xl:gap-10 sm:gap-6">
+            <div className="flex items-center xl:gap-4">
                 <Link to="/">
                     <img src={logo} alt="logo" className="h-12 w-40" />
                 </Link>

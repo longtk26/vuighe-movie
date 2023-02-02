@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "vuigheRoboto";
+    src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "vuighe";
+    src: url("./fonts/vuighe.ttf");
+}
+
+@layer utilities {
+    .hover-red:hover .effect {
+        color: red;
+    }
+
+    .hover-red:hover img {
+        transform: scale(1.25);
+    }
+
+    .search-parent:has(.input-search:focus) {
+        border-color: red;
+    }
+
+    .search-parent:has(.input-search:focus) ~ .anime-search {
+        display: block;
+        opacity: 1;
+    }
+}
