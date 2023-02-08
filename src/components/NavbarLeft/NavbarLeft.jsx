@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { animated } from "@react-spring/web";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoIosFilm } from "react-icons/io";
 import { HiNewspaper, HiChartBar } from "react-icons/hi";
@@ -9,7 +10,7 @@ import logo from "../../assets";
 import Search from "../Search/Search";
 import NavbarLink from "../NavbarLink/NavbarLink";
 
-function NavbarLeft({ show, onShow }) {
+function NavbarLeft({ onShow, style }) {
     // Use to click outside of navbarLeft
     const navbarRef = useRef();
     const handleCloseNavbar = (e) => {
@@ -21,15 +22,14 @@ function NavbarLeft({ show, onShow }) {
     useEffect(() => {
         document.addEventListener("mousedown", handleCloseNavbar);
 
-        //Component is actually not unmount but we need to add this
         return () =>
             document.removeEventListener("mousedown", handleCloseNavbar);
     }, []);
     return (
-        <div
+        <animated.div
             className={`fixed left-0 top-0 bottom-0 bg-white w-[280px]
-            shadow-navbar translate-x-[-100%] transition-transform duration-300
-            ${show && "translate-x-0"} lg:hidden`}
+            shadow-navbar lg:hidden`}
+            style={style}
             ref={navbarRef}
         >
             <div className="flex justify-between items-center px-2.5 mt-1">
@@ -58,7 +58,7 @@ function NavbarLeft({ show, onShow }) {
                     </NavbarLink>
                 </div>
             </div>
-        </div>
+        </animated.div>
     );
 }
 

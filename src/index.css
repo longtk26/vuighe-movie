@@ -25,8 +25,12 @@
         border-color: red;
     }
 
-    .search-parent:has(.input-search:focus) ~ .anime-search {
-        display: block;
-        opacity: 1;
+    .scroll-bar-search {
+        @apply overflow-y-hidden;
+    }
+
+    .scroll-bar-search:hover {
+        @apply scrollbar scrollbar-thumb-rounded-md scrollbar-w-[6px]
+        scrollbar-thumb-[#aaa] scrollbar-track-gray-100;
     }
 }

@@ -32,3 +32,19 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 8
 
     _Popper
+
+# Ngày 9
+
+    _UI header and navbar
+
+# Ngày 10
+
+    _Fix click on animeSearch
+
+# Ngày 11
+
+    _Create animation fadeIn navbarLeft
+
+# Ngày 12
+
+    _Handle input focus

@@ -1,8 +1,15 @@
+import { useState } from "react";
+import { useTransition } from "@react-spring/web";
 import { FaSearch } from "react-icons/fa";
-import AnimeSearch from "../AnimeSearch/AnimeSearch";
+import SearchResult from "../SearchResult/SearchResult";
 
 function Search({ navbar }) {
-    const fakeAnimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const [focus, setFocus] = useState(false);
+    const transition = useTransition(focus, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+    });
 
     return (
         <div
@@ -25,6 +32,7 @@ function Search({ navbar }) {
                                     : "text-[13px] px-2 py-1"
                             } caret-[#999] input-search`}
                     placeholder="Tiềm kiếm anime"
+                    onFocus={() => setFocus(true)}
                 />
                 <FaSearch
                     className="absolute text-[#999] right-2 top-[50%] 
@@ -32,35 +40,17 @@ function Search({ navbar }) {
                 />
             </div>
 
-            <div
-                className={`absolute right-[-6px] left-[-6px] top-[-8px] bg-white
-                pt-10 px-2 min-h-[129px] opacity-0
-                ${navbar ? "lg:hidden" : "max-h-[400px] shadow-search"}
-                anime-search transition-opacity duration-300`}
-            >
-                <div
-                    className={`${
-                        navbar
-                            ? "w-full max-h-[100vh] mt-2"
-                            : "w-[320px] max-h-[320px] mt-1"
-                    } overflow-y-auto`}
-                >
-                    {fakeAnimes ? (
-                        fakeAnimes.map((anime, index) => (
-                            <AnimeSearch
-                                key={index}
-                                img="https://s199.imacdn.com/vg/2015/05/dragon-ball-large-1432284978.jpg"
-                                title="Toriko 3d Kaimaku! Gourmet Adventure!"
-                                views="2528286"
-                            />
-                        ))
-                    ) : (
-                        <p className="text-center mt-8 text-sm">
-                            Nhập tên anime để tìm kiếm
-                        </p>
-                    )}
-                </div>
-            </div>
+            {transition((style, show) => {
+                return (
+                    show && (
+                        <SearchResult
+                            navbar={navbar}
+                            onHide={setFocus}
+                            style={style}
+                        />
+                    )
+                );
+            })}
         </div>
     );
 }

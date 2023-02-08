@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTransition } from "@react-spring/web";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
 import { TfiMenu } from "react-icons/tfi";
@@ -10,6 +11,12 @@ import { Button, NavbarLeft, Search } from "../../components";
 
 function Header() {
     const [showNavbarLeft, setShowNavbarLeft] = useState(false);
+
+    const transitions = useTransition(showNavbarLeft, {
+        from: { x: -280 },
+        enter: { x: 0 },
+        leave: { x: -290 },
+    });
 
     return (
         <header
@@ -32,7 +39,16 @@ function Header() {
                     onClick={() => setShowNavbarLeft(true)}
                 />
 
-                <NavbarLeft show={showNavbarLeft} onShow={setShowNavbarLeft} />
+                {transitions((style, show) => {
+                    return (
+                        show && (
+                            <NavbarLeft
+                                onShow={setShowNavbarLeft}
+                                style={style}
+                            />
+                        )
+                    );
+                })}
             </div>
             <div className="flex items-center xl:gap-20 sm:gap-4">
                 <Search />
