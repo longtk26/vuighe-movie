@@ -7,7 +7,7 @@ Ngày bắt đầu: 22/1/2023
 
 # Ngày 2
 
-    _ Header
+    _Header
 
 # Ngày 3
 
@@ -48,3 +48,11 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 12
 
     _Handle input focus
+
+# Ngày 13
+
+    _Slider
+
+# Ngày 14
+
+    _Slider

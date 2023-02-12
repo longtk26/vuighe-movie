@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTransition } from "@react-spring/web";
 import { FaSearch } from "react-icons/fa";
 import SearchResult from "../SearchResult/SearchResult";
 
 function Search({ navbar }) {
     const [focus, setFocus] = useState(false);
+    const containInputRef = useRef();
     const transition = useTransition(focus, {
         from: { opacity: 0 },
         enter: { opacity: 1 },
@@ -22,6 +23,7 @@ function Search({ navbar }) {
                         border-[#ddd] border-[1px] w-full border-soopacity-0lid
                         ${!navbar && "hidden"} ${navbar && "lg:hidden"} lg:flex
                         search-parent transition-colors duration-300`}
+                ref={containInputRef}
             >
                 <input
                     type="text"
@@ -47,6 +49,7 @@ function Search({ navbar }) {
                             navbar={navbar}
                             onHide={setFocus}
                             style={style}
+                            inFocus={containInputRef}
                         />
                     )
                 );

@@ -2,13 +2,17 @@ import { useEffect, useRef } from "react";
 import { animated } from "@react-spring/web";
 import AnimeSearch from "../AnimeSearch/AnimeSearch";
 
-function SearchResult({ navbar, onHide, style }) {
+function SearchResult({ navbar, onHide, style, inFocus }) {
     const fakeAnimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
     const searchResultRef = useRef();
 
     const handleSearchResult = (e) => {
         if (!searchResultRef.current.contains(e.target)) {
             onHide(false);
+        }
+
+        if (inFocus.current.contains(e.target)) {
+            onHide(true);
         }
     };
 
