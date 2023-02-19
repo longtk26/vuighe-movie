@@ -20,7 +20,7 @@ function Header() {
 
     return (
         <header
-            className="flex justify-between items-center h-[60px] shadow
+            className="flex justify-between items-center h-[60px] border-b
                        md:py-4 md:px-14 px-1 fixed w-full left-0 right-0 top-0 bg-white"
         >
             <div className="flex items-center xl:gap-4">

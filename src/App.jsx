@@ -4,7 +4,7 @@ import { Home } from "./pages";
 
 function App() {
     return (
-        <div className="font-vuighe">
+        <div className="font-sans relative z-0">
             <BrowserRouter>
                 <Header />
                 <Routes>

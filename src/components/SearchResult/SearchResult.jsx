@@ -27,7 +27,7 @@ function SearchResult({ navbar, onHide, style, inFocus }) {
     return (
         <animated.div
             className={`absolute right-[-6px] left-[-6px] top-[-8px] bg-white
-                        pt-10 px-2 pb-4 min-h-[129px]  
+                        pt-10 px-2 pb-4 min-h-[129px] z-[1] 
                         ${navbar ? "lg:hidden" : "max-h-[400px] shadow-search"}
                         `}
             ref={searchResultRef}

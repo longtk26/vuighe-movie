@@ -7,9 +7,6 @@ module.exports = {
                 navbar: "0 0 10px #999",
                 search: "0 0 5px #333",
             },
-            fontFamily: {
-                vuighe: ["vuigheRoboto", "sans-serif"],
-            },
         },
     },
     plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
