@@ -1,11 +1,17 @@
-import { Slider } from "../../components";
+import { Slider, Banner } from "../../components";
 
 function Home() {
     return (
-        <main className="px-14 relative -z-10">
-            <div className="mt-20 h-[280px] flex flex-wrap items-center gap-x-2">
+        <main
+            className="lg:px-8 md:px-3 relative -z-10 px-2 md:w-[768px] md:m-auto
+        lg:w-full lg:m-0"
+        >
+            <div
+                className="mt-20 md:h-[165px] lg:h-[280px] flex items-center md:gap-x-2
+            md:flex-row flex-col gap-y-2"
+            >
                 <Slider />
-                <div className="h-full bg-black grow"></div>
+                <Banner />
             </div>
         </main>
     );

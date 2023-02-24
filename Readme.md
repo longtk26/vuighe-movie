@@ -68,3 +68,19 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 17
 
     _ Slider
+
+# Ngày 18
+
+    _ Slider
+
+# Ngày 19
+
+    _Banner
+
+# Ngày 20
+
+    _Banner
+
+# Ngày 21
+
+    _ Responsive for slider and banner

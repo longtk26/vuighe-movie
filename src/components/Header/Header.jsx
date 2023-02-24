@@ -19,43 +19,45 @@ function Header() {
     });
 
     return (
-        <header
-            className="flex justify-between items-center h-[60px] border-b
-                       md:py-4 md:px-14 px-1 fixed w-full left-0 right-0 top-0 bg-white"
-        >
-            <div className="flex items-center xl:gap-4">
-                <Link to="/">
-                    <img src={logo} alt="logo" className="h-12 w-40" />
-                </Link>
-                <div className="gap-x-2.5 hidden lg:flex">
-                    <Button path="anime">Anime</Button>
-                    <Button path="tin-tuc">Tin Tức</Button>
-                    <Button path="truyen-tranh">Truyện</Button>
-                    <Button path="bang-xep-hang">BXH</Button>
+        <header className="border-b h-[60px] bg-white w-full fixed left-0 right-0 top-0">
+            <div
+                className="flex justify-between items-center h-[60px] 
+                       md:py-4 lg:px-8 md:px-3 px-2 lg:w-full md:m-auto md:w-[768px]"
+            >
+                <div className="flex items-center xl:gap-4">
+                    <Link to="/">
+                        <img src={logo} alt="logo" className="h-12 w-40" />
+                    </Link>
+                    <div className="gap-x-2.5 hidden lg:flex">
+                        <Button path="anime">Anime</Button>
+                        <Button path="tin-tuc">Tin Tức</Button>
+                        <Button path="truyen-tranh">Truyện</Button>
+                        <Button path="bang-xep-hang">BXH</Button>
+                    </div>
+
+                    <TfiMenu
+                        className="lg:hidden text-2xl cursor-pointer"
+                        onClick={() => setShowNavbarLeft(true)}
+                    />
+
+                    {transitions((style, show) => {
+                        return (
+                            show && (
+                                <NavbarLeft
+                                    onShow={setShowNavbarLeft}
+                                    style={style}
+                                />
+                            )
+                        );
+                    })}
                 </div>
-
-                <TfiMenu
-                    className="lg:hidden text-2xl cursor-pointer"
-                    onClick={() => setShowNavbarLeft(true)}
-                />
-
-                {transitions((style, show) => {
-                    return (
-                        show && (
-                            <NavbarLeft
-                                onShow={setShowNavbarLeft}
-                                style={style}
-                            />
-                        )
-                    );
-                })}
-            </div>
-            <div className="flex items-center xl:gap-20 sm:gap-4">
-                <Search />
-                <div className="flex gap-x-2.5">
-                    <Button circle Icon={AiFillInfoCircle} />
-                    <Button circle Icon={FiSun} hover />
-                    <Button circle Icon={FaUser} user />
+                <div className="flex items-center xl:gap-20 sm:gap-4">
+                    <Search />
+                    <div className="flex gap-x-2.5">
+                        <Button circle Icon={AiFillInfoCircle} />
+                        <Button circle Icon={FiSun} hover />
+                        <Button circle Icon={FaUser} user />
+                    </div>
                 </div>
             </div>
         </header>
