@@ -22,7 +22,7 @@ function Header() {
         <header className="border-b h-[60px] bg-white w-full fixed left-0 right-0 top-0">
             <div
                 className="flex justify-between items-center h-[60px] 
-                       md:py-4 lg:px-8 md:px-3 px-2 lg:w-full md:m-auto md:w-[768px]"
+                       md:py-4 lg:px-12 md:px-3 px-2 lg:w-full md:m-auto md:w-[768px]"
             >
                 <div className="flex items-center xl:gap-4">
                     <Link to="/">

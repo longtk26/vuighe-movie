@@ -84,3 +84,15 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 21
 
     _ Responsive for slider and banner
+
+# Ngày 22
+
+    _ Layout for Homepage
+
+# Ngày 23
+
+    _ Layout for Homepage
+
+# Ngày 24
+
+    _ Layout for Homepage

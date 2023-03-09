@@ -10,7 +10,7 @@ function Slider() {
 
     return (
         <div
-            className="h-full lg:w-[740px] xl:w-[920px] md:w-[550px] relative slider cursor-pointer"
+            className="h-full md:w-[550px] grow-[10] relative slider cursor-pointer"
             onMouseEnter={() => {
                 setIsHover(true);
             }}
