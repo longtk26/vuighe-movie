@@ -5,6 +5,7 @@ import SearchResult from "../SearchResult/SearchResult";
 
 function Search({ navbar }) {
     const [focus, setFocus] = useState(false);
+
     const containInputRef = useRef();
     const transition = useTransition(focus, {
         from: { opacity: 0 },
