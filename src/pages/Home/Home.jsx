@@ -20,6 +20,8 @@ function Home() {
                             key={data}
                             className={layout.typeChildren}
                             img={layout.img}
+                            typeCard={layout.typeCard}
+                            data={data}
                         />
                     ))}
                 </Layout>
