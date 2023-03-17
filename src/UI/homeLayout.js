@@ -31,7 +31,7 @@ const homeLayout = [
         typeChildren: formLayout.children_3,
         typeCard: 3,
         datas: [1, 2, 3, 4, 5, 6],
-        img: "https://s199.imacdn.com/vg/2022/10/27/3f36301a78e9b166_c9150ff030d119da_4891216668563363185710.jpg",
+        img: "https://s199.imacdn.com/vg/2023/03/16/514035ac3ac41c62_237c04e334ae5b27_45223167895921123.jpg",
     },
     {
         title: "hôm nay xem gì",

@@ -25,7 +25,7 @@ export const children_2 =
     "relative cursor-pointer overflow-hidden group h-[96px] snap-start snap-always grow shrink-0 w-[200px] md:h-auto md:w-auto first:col-span-2 first:row-span-2 md:aspect-[2/1] md:aspect-[0/0]";
 
 export const children_3 =
-    "relative cursor-pointer overflow-hidden group shrink-0 snap-start snap-always md:aspect-[18/25] w-[150px] h-[208px] md:h-auto md:w-auto";
+    "relative cursor-pointer overflow-hidden group shrink-0 snap-start snap-always md:aspect-[2/3] w-[150px] h-[208px] md:h-auto md:w-auto";
 
 export const children_rank =
     "relative cursor-pointer overflow-hidden group h-[112px] snap-start snap-always grow shrink-0 w-[200px] md:h-auto md:w-auto first:col-span-2 first:row-span-2 md:aspect-[2/1] md:aspect-[0/0]";

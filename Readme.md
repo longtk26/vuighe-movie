@@ -112,3 +112,7 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 28
 
     _Card Anime
+
+# Ngày 29
+
+    _Card Anime
