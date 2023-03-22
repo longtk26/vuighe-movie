@@ -1,16 +1,16 @@
-export const TypeCardHorizontal = () => (
+export const TypeCardHorizontal = ({ data }) => (
     <div
         className="absolute h-[100px] bottom-0 right-0 left-0 bg-gradient-to-b from-transparent 
 to-black text-white lg:p-3 group-hover:to-cyan-900 px-1"
     >
         <h3 className="xl:text-[16px] xl:mb-1 lg:mt-[36px] text-sm truncate mt-[60px] md:mt-14">
-            Kami-tachi ni Hirowareta Otoko
+            {data.title}
         </h3>
         <div className="flex justify-between items-center font-thin text-[10px] md:text-[12px]">
             <p className="block xl:w-[135px] w-[72px] truncate">
-                Tập 22 - Ryoma và slime bay
+                Tập {data?.episodes} - {data.title_synonyms?.[0] || "No title"}
             </p>
-            <span>3,763 lượt xem</span>
+            <span>{data.favorites} lượt xem</span>
         </div>
     </div>
 );
@@ -30,7 +30,7 @@ export const TypeCardRank = ({ data }) => (
                                 : "md:text-[26px] md:top-1 lg:text-[35px] lg:top-3 lg:left-3"
                         }`}
         >
-            {data}
+            {data.rank}
         </h1>
         <span
             className={`block truncate absolute w-[194px]
@@ -40,12 +40,12 @@ export const TypeCardRank = ({ data }) => (
                             : "md:w-[58px] xl:w-[180px]"
                     }`}
         >
-            Tensei Oujo to Tensai Reijou no Mahou Kakumei
+            {data.title}
         </span>
     </div>
 );
 
-export const TypeCardVertical = () => (
+export const TypeCardVertical = ({ data }) => (
     <div
         className="absolute w-full bottom-0 text-white text-sm lg:text-[16px] h-[100px]
                 bg-gradient-to-b from-transparent to-black px-[5px] lg:px-3
@@ -56,11 +56,11 @@ export const TypeCardVertical = () => (
                     relative h-[42px] lg:mb-2 lg:mt-5"
         >
             <span className="absolute bottom-0 line-clamp-2 md:line-clamp-1">
-                Thanh Gươm Diệt Quỷ: Đường Đến Làng Thợ Rèn
+                {data.title}
             </span>
         </div>
         <span className="text-[10px] md:text-[12px] font-light block">
-            45,879 lượt xem
+            {data.favorites} lượt xem
         </span>
     </div>
 );

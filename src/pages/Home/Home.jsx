@@ -1,6 +1,12 @@
-import { Slider, Banner, CardAnime } from "../../components";
-import { Layout } from "../../Layout";
-import { homeLayout } from "../../UI";
+import { Slider, Banner } from "../../components";
+import {
+    Collection,
+    Ranking,
+    NewEpisode,
+    AllAnime,
+    AnimeMovie,
+    WhatSee,
+} from "../../containers";
 
 function Home() {
     return (
@@ -9,23 +15,12 @@ function Home() {
                 <Slider />
                 <Banner />
             </div>
-            {homeLayout.map((layout) => (
-                <Layout
-                    key={layout.title}
-                    title={layout.title}
-                    className={layout.typeLayout}
-                >
-                    {layout.datas.map((data) => (
-                        <CardAnime
-                            key={data}
-                            className={layout.typeChildren}
-                            img={layout.img}
-                            typeCard={layout.typeCard}
-                            data={data}
-                        />
-                    ))}
-                </Layout>
-            ))}
+            <NewEpisode />
+            <Collection />
+            <Ranking />
+            <AnimeMovie />
+            <WhatSee />
+            <AllAnime />
         </main>
     );
 }

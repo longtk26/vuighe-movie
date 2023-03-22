@@ -1,0 +1,9 @@
+export { default as collect1 } from "./collect_1.jpg";
+export { default as collect2 } from "./collect_2.jpg";
+export { default as collect3 } from "./collect_3.jpg";
+export { default as collect4 } from "./collect_4.jpg";
+export { default as collect5 } from "./collect_5.jpg";
+export { default as collect6 } from "./collect_6.jpg";
+export { default as collect7 } from "./collect_7.jpg";
+export { default as collect8 } from "./collect_8.jpg";
+export { default as collect9 } from "./collect_9.jpg";

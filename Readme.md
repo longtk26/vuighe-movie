@@ -116,3 +116,15 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 29
 
     _Card Anime
+
+# Ngày 30
+
+    _API
+
+# Ngày 31
+
+    _Change structure homePage
+
+# Ngày 32
+
+    _API and add pictures to collections
