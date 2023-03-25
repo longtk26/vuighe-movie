@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTransition } from "@react-spring/web";
-import { AiFillInfoCircle } from "react-icons/ai";
 import { FiSun } from "react-icons/fi";
 import { TfiMenu } from "react-icons/tfi";
 import { FaUser } from "react-icons/fa";
@@ -19,7 +18,10 @@ function Header() {
     });
 
     return (
-        <header className="border-b h-[60px] bg-white w-full fixed left-0 right-0 top-0">
+        <header
+            className="border-b dark:shadow dark:border-none h-[60px] bg-white w-full fixed left-0 right-0 top-0
+        dark:bg-slate-800 dark:shadow-slate-700"
+        >
             <div
                 className="flex justify-between items-center h-[60px] 
                        md:py-4 lg:px-12 md:px-3 px-2 lg:w-full md:m-auto md:w-[768px]"
@@ -54,7 +56,6 @@ function Header() {
                 <div className="flex items-center xl:gap-20 sm:gap-4">
                     <Search />
                     <div className="flex gap-x-2.5">
-                        <Button circle Icon={AiFillInfoCircle} />
                         <Button circle Icon={FiSun} hover />
                         <Button circle Icon={FaUser} user />
                     </div>

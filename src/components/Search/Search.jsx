@@ -15,15 +15,15 @@ function Search({ navbar }) {
 
     return (
         <div
-            className={`relative lg:w-[320px] lg:block
+            className={`relative lg:w-[320px] lg:block group
         ${navbar ? "" : "hidden"}`}
         >
             <div
                 className={`relative z-10
                         ${!navbar && "xl:rounded-[20px]"} pl-2.5 pr-8 xl:mr-6
-                        border-[#ddd] border-[1px] w-full border-soopacity-0lid
+                        border-[#ddd] border-[1px] w-full dark:border-gray-700
                         ${!navbar && "hidden"} ${navbar && "lg:hidden"} lg:flex
-                        search-parent transition-colors duration-300`}
+                        search-parent dark:search-parent-dark transition-colors duration-300`}
                 ref={containInputRef}
             >
                 <input
@@ -33,13 +33,14 @@ function Search({ navbar }) {
                                 navbar
                                     ? "text-[13px] py-0.5"
                                     : "text-[13px] px-2 py-1"
-                            } caret-[#999] input-search`}
+                            } caret-[#999] input-search dark:bg-slate-800`}
                     placeholder="Tiềm kiếm anime"
                     onFocus={() => setFocus(true)}
                 />
                 <FaSearch
                     className="absolute text-[#999] right-2 top-[50%] 
-                            translate-y-[-50%] hover:text-black cursor-pointer"
+                            translate-y-[-50%] hover:text-black cursor-pointer
+                            dark:hover:text-teal-500 dark:group-hover:text-teal-500"
                 />
             </div>
 

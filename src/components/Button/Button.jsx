@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function Button({ path, Icon, circle, user, hover, children }) {
     let Tag = circle ? "div" : Link;
 
-    const classDefault =
-        "border-[1px] border-solid border-gray-300/100 xl:rounded-2xl py-1 px-2 xl:px-4 text-sm";
+    const classDefault = `border-[1px] border-solid border-gray-300/100 dark:border-gray-700 
+        xl:rounded-2xl py-1 px-2 xl:px-4 text-sm dark:hover:text-teal-500`;
 
-    const classCircle = `rounded-[50%] p-2 bg-[#eee] w-10 h-10 flex justify-center items-center text-1xl
+    const classCircle = `rounded-[50%] dark:bg-slate-700 p-2 bg-[#eee] w-10 h-10 flex justify-center items-center text-1xl
         ${user ? "bg-[rgba(0,0,0,.25)] text-white" : ""} cursor-pointer
         ${
             hover

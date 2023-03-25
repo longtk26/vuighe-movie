@@ -3,7 +3,16 @@ import { animated } from "@react-spring/web";
 import AnimeSearch from "../AnimeSearch/AnimeSearch";
 
 function SearchResult({ navbar, onHide, style, inFocus }) {
-    const fakeAnimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+    const fakeAnimes = [
+        "item1",
+        "item2",
+        "item3",
+        "item4",
+        "item5",
+        "item6",
+        "item7",
+        "item8",
+    ];
     const searchResultRef = useRef();
 
     const handleSearchResult = (e) => {
@@ -27,7 +36,7 @@ function SearchResult({ navbar, onHide, style, inFocus }) {
     return (
         <animated.div
             className={`absolute right-[-6px] left-[-6px] top-[-8px] bg-white
-                        pt-10 px-2 pb-4 min-h-[129px] z-[1] 
+                        pt-10 px-2 pb-4 min-h-[129px] z-[1] dark:bg-slate-800/90
                         ${navbar ? "lg:hidden" : "max-h-[400px] shadow-search"}
                         `}
             ref={searchResultRef}
@@ -52,6 +61,11 @@ function SearchResult({ navbar, onHide, style, inFocus }) {
                 ) : (
                     <p className="text-center mt-8 text-sm">
                         Nhập tên anime để tìm kiếm
+                    </p>
+                )}
+                {fakeAnimes.length === 0 && (
+                    <p className="text-center mt-8 text-sm">
+                        Không tìm thấy anime phù hợp
                     </p>
                 )}
             </div>

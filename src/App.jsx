@@ -14,7 +14,7 @@ const queryClient = new QueryClient({
 
 function App() {
     return (
-        <div className="font-sans relative z-0">
+        <div className="font-sans relative z-0 dark:bg-slate-800 dark:text-gray-400">
             <BrowserRouter>
                 <QueryClientProvider client={queryClient}>
                     <Header />

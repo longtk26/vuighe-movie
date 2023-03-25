@@ -1,18 +1,24 @@
 function AnimeSearch({ img, title, views }) {
     return (
-        <div className="flex items-center mt-4 cursor-pointer hover-red">
+        <div className="flex items-center mt-4 cursor-pointer group/item">
             <div className="h-[56px] w-[100px] mr-2 overflow-hidden">
                 <img
                     src={img}
                     alt={title}
-                    className="h-full w-full transition-transform duration-300"
+                    className="h-full w-full group-hover/item:scale-125 transition-transform duration-300"
                 />
             </div>
             <div>
-                <h4 className="text-[13px] text-[#333] effect transition-all">
+                <h4
+                    className="text-[13px] text-[#333] group-hover/item:text-red-500 
+                    dark:text-gray-400 transition-all dark:group-hover/item:text-teal-500"
+                >
                     {title}
                 </h4>
-                <p className="text-[11px] text-[#888] effect transition-all mt-1">
+                <p
+                    className="text-[11px] group-hover/item:text-red-500 text-[#888] 
+                transition-all mt-1 dark:group-hover/item:text-teal-500"
+                >
                     {views} lượt xem
                 </p>
             </div>

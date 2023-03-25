@@ -128,3 +128,11 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 32
 
     _API and add pictures to collections
+
+# Ngày 33
+
+    _Dark mode
+
+# Ngày 34
+
+    _Dark mode
