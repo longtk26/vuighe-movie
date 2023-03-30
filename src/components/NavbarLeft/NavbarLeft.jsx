@@ -20,15 +20,19 @@ function NavbarLeft({ onShow, style }) {
     };
 
     useEffect(() => {
-        document.addEventListener("mousedown", handleCloseNavbar);
+        document.addEventListener("touchstart", handleCloseNavbar, {
+            passive: true,
+        });
 
         return () =>
-            document.removeEventListener("mousedown", handleCloseNavbar);
+            document.removeEventListener("touchstart", handleCloseNavbar, {
+                passive: true,
+            });
     }, []);
     return (
         <animated.div
             className={`fixed left-0 top-0 bottom-0 bg-white w-[280px]
-            shadow-navbar lg:hidden`}
+            shadow-navbar lg:hidden dark:bg-slate-800/90`}
             style={style}
             ref={navbarRef}
         >

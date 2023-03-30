@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../GlobalState/Theme";
 
 function Button({ path, Icon, circle, user, hover, children }) {
+    const [, setTheme] = useContext(ThemeContext);
     let Tag = circle ? "div" : Link;
 
     const classDefault = `border-[1px] border-solid border-gray-300/100 dark:border-gray-700 
@@ -15,8 +18,24 @@ function Button({ path, Icon, circle, user, hover, children }) {
         }
         `;
 
+    //Pass circle to define only iconSun that can be clicked
+    const handleTheme = (circle) => {
+        if (circle) {
+            setTheme((preTheme) => {
+                if (preTheme === "light") {
+                    return "dark";
+                } else {
+                    return "light";
+                }
+            });
+        }
+    };
     return (
-        <Tag to={path} className={circle ? classCircle : classDefault}>
+        <Tag
+            to={path}
+            className={circle ? classCircle : classDefault}
+            onClick={() => handleTheme(circle)}
+        >
             {children || (
                 <Icon
                     className={`${

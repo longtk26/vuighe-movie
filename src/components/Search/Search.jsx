@@ -33,7 +33,7 @@ function Search({ navbar }) {
                                 navbar
                                     ? "text-[13px] py-0.5"
                                     : "text-[13px] px-2 py-1"
-                            } caret-[#999] input-search dark:bg-slate-800`}
+                            } caret-[#999] input-search dark:bg-slate-800 duration-300`}
                     placeholder="Tiềm kiếm anime"
                     onFocus={() => setFocus(true)}
                 />

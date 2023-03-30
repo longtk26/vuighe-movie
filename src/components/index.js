@@ -5,3 +5,4 @@ export { default as Search } from "./Search/Search";
 export { default as NavbarLeft } from "./NavbarLeft/NavbarLeft";
 export { default as Banner } from "./Banner/Banner";
 export { default as CardAnime } from "./CardAnime/CardAnime";
+export { default as Theme } from "./GlobalState/Theme";

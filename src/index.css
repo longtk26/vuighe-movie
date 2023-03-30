@@ -23,4 +23,9 @@
         @apply scrollbar scrollbar-thumb-rounded-md scrollbar-w-[6px]
         scrollbar-thumb-[#aaa] scrollbar-track-gray-100;
     }
+
+    .scroll-bar-dark:hover {
+        @apply scrollbar scrollbar-thumb-rounded-md scrollbar-w-[6px]
+        scrollbar-thumb-gray-400 scrollbar-track-slate-800/90;
+    }
 }

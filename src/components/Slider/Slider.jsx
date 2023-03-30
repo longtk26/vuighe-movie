@@ -23,6 +23,7 @@ function Slider() {
                 <SliderImg indexImg={indexImg} onSetIndex={setIndexImg} />
             </div>
             <SliderBtn onSetIndex={handleSlide} right />
+
             <div className="absolute bottom-1 left-[50%] translate-x-[-50%]">
                 {sliders.map((slider) => (
                     <button

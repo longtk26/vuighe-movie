@@ -4,14 +4,7 @@ import AnimeSearch from "../AnimeSearch/AnimeSearch";
 
 function SearchResult({ navbar, onHide, style, inFocus }) {
     const fakeAnimes = [
-        "item1",
-        "item2",
-        "item3",
-        "item4",
-        "item5",
-        "item6",
-        "item7",
-        "item8",
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
     ];
     const searchResultRef = useRef();
 
@@ -26,18 +19,26 @@ function SearchResult({ navbar, onHide, style, inFocus }) {
     };
 
     useEffect(() => {
-        document.addEventListener("mousedown", handleSearchResult);
+        document.addEventListener("mousedown", handleSearchResult, {
+            passive: true,
+        });
 
         return () => {
-            document.removeEventListener("mousedown", handleSearchResult);
+            document.removeEventListener("mousedown", handleSearchResult, {
+                passive: true,
+            });
         };
     }, []);
 
     return (
         <animated.div
             className={`absolute right-[-6px] left-[-6px] top-[-8px] bg-white
-                        pt-10 px-2 pb-4 min-h-[129px] z-[1] dark:bg-slate-800/90
-                        ${navbar ? "lg:hidden" : "max-h-[400px] shadow-search"}
+                        pt-10 px-2 pb-4 min-h-[129px] z-[1] dark:bg-slate-800
+                        ${
+                            navbar
+                                ? "lg:hidden min-h-[250px]"
+                                : "max-h-[400px] shadow-search"
+                        }
                         `}
             ref={searchResultRef}
             style={style}
@@ -47,7 +48,7 @@ function SearchResult({ navbar, onHide, style, inFocus }) {
                     navbar
                         ? "w-full max-h-[100vh] mt-2"
                         : "w-[320px] max-h-[320px] mt-1"
-                } scroll-bar-search`}
+                } scroll-bar-search dark:scroll-bar-dark`}
             >
                 {fakeAnimes ? (
                     fakeAnimes.map((anime, index) => (
@@ -59,12 +60,18 @@ function SearchResult({ navbar, onHide, style, inFocus }) {
                         />
                     ))
                 ) : (
-                    <p className="text-center mt-8 text-sm">
+                    <p
+                        className={`text-center mt-8 text-sm
+                    ${navbar ? "mt-16" : ""}`}
+                    >
                         Nhập tên anime để tìm kiếm
                     </p>
                 )}
                 {fakeAnimes.length === 0 && (
-                    <p className="text-center mt-8 text-sm">
+                    <p
+                        className={`text-center mt-8 text-sm
+                    ${navbar ? "mt-16" : ""}`}
+                    >
                         Không tìm thấy anime phù hợp
                     </p>
                 )}

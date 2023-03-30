@@ -20,7 +20,7 @@ function Header() {
     return (
         <header
             className="border-b dark:shadow dark:border-none h-[60px] bg-white w-full fixed left-0 right-0 top-0
-        dark:bg-slate-800 dark:shadow-slate-700"
+        dark:bg-slate-800 dark:shadow-slate-700 transition-all duration-300"
         >
             <div
                 className="flex justify-between items-center h-[60px] 
