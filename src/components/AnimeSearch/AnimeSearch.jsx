@@ -5,7 +5,7 @@ function AnimeSearch({ img, title, views }) {
                 <img
                     src={img}
                     alt={title}
-                    className="h-full w-full group-hover/item:scale-125 transition-transform duration-300"
+                    className="h-full w-full object-cover group-hover/item:scale-125 transition-transform"
                 />
             </div>
             <div>

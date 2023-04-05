@@ -3,3 +3,4 @@ export { default as fetchNewEpisode } from "./fetchNewEpisode";
 export { default as fetchAnimeMovie } from "./fetchAnimeMovie";
 export { default as fetchAnimeToday } from "./fetchAnimeToday";
 export { default as fetchAllAnime } from "./fetchAllAnime";
+export { default as fetchAnimeSearch } from "./fetchAnimeSearch";

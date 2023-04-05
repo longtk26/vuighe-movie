@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets";
 import Search from "../Search/Search";
-import NavbarLink from "../NavbarLink/NavbarLink";
+import NavbarLink from "./NavbarLink";
 
 function NavbarLeft({ onShow, style }) {
     // Use to click outside of navbarLeft
@@ -20,12 +20,12 @@ function NavbarLeft({ onShow, style }) {
     };
 
     useEffect(() => {
-        document.addEventListener("touchstart", handleCloseNavbar, {
+        document.addEventListener("mousedown", handleCloseNavbar, {
             passive: true,
         });
 
         return () =>
-            document.removeEventListener("touchstart", handleCloseNavbar, {
+            document.removeEventListener("mousedown", handleCloseNavbar, {
                 passive: true,
             });
     }, []);

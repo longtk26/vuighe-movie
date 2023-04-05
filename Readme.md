@@ -136,3 +136,11 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 34
 
     _Dark mode
+
+# Ngày 35
+
+    _Search anime
+
+# Ngày 36
+
+    _Search anime
