@@ -11,6 +11,7 @@ import { Button, NavbarLeft, Search } from "../../components";
 function Header() {
     const [showNavbarLeft, setShowNavbarLeft] = useState(false);
 
+    //Create animation for navbarleft
     const transitions = useTransition(showNavbarLeft, {
         from: { x: -280 },
         enter: { x: 0 },
@@ -32,8 +33,7 @@ function Header() {
                     </Link>
                     <div className="gap-x-2.5 hidden lg:flex">
                         <Button path="anime">Anime</Button>
-                        <Button path="tin-tuc">Tin Tức</Button>
-                        <Button path="truyen-tranh">Truyện</Button>
+                        <Button path="movie">Movie</Button>
                         <Button path="bang-xep-hang">BXH</Button>
                     </div>
 

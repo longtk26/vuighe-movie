@@ -4,7 +4,7 @@ import {
     TypeCardVertical,
 } from "./TypeCards";
 
-function CardAnime({ className, img, typeCard, data }) {
+function CardAnime({ className, img, typeCard, data, rankingPage }) {
     return (
         <div className={className}>
             <img
@@ -17,7 +17,9 @@ function CardAnime({ className, img, typeCard, data }) {
                         : ""
                 }`}
             />
-            {typeCard === 1 && <TypeCardHorizontal data={data} />}
+            {typeCard === 1 && (
+                <TypeCardHorizontal data={data} rankingPage={rankingPage} />
+            )}
             {typeCard === "rank" && <TypeCardRank data={data} />}
             {typeCard === 3 && <TypeCardVertical data={data} />}
         </div>

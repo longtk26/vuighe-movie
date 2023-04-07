@@ -144,3 +144,11 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 36
 
     _Search anime
+
+# Ngày 37
+
+    _Movie page, rank page
+
+# Ngày 38
+
+    _Fix call API

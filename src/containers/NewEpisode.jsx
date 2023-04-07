@@ -4,7 +4,7 @@ import { useNewEpisode } from "../hooks";
 
 function NewEpisode() {
     const [newEpisodes] = useNewEpisode();
-    const newEpisodeList = newEpisodes?.splice(0, 12);
+    const newEpisodeList = newEpisodes?.filter((item, index) => index <= 11);
 
     return (
         <Layout title="tập mới nhất" className={formLayout.layout_1}>

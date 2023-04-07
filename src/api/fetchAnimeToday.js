@@ -1,5 +1,5 @@
 const fetchAnimeToday = async () => {
-    const url = `https://api.jikan.moe/v4/seasons/2020/winter`;
+    const url = `https://api.jikan.moe/v4/seasons/2020/fall`;
 
     const response = await fetch(url);
     if (!response.ok) {

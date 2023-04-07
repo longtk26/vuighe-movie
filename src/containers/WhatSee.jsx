@@ -4,7 +4,7 @@ import { useAnimeToday } from "../hooks";
 
 function WhatSee() {
     const [animeTodays] = useAnimeToday();
-    const animeTodaysList = animeTodays?.splice(0, 6);
+    const animeTodaysList = animeTodays?.filter((item, index) => index <= 5);
 
     return (
         <Layout title="hôm nay xem gì" className={formLayout.layout_3}>

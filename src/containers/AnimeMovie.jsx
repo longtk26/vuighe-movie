@@ -4,7 +4,7 @@ import { useAnimeMovie } from "../hooks";
 
 function AnimeMovie() {
     const [animeMovies] = useAnimeMovie();
-    const animeMovieList = animeMovies?.splice(0, 6);
+    const animeMovieList = animeMovies?.filter((item, index) => index <= 5);
 
     return (
         <Layout title="anime movie" className={formLayout.layout_3}>

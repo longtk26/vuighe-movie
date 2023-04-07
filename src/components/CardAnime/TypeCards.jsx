@@ -1,16 +1,32 @@
-export const TypeCardHorizontal = ({ data }) => (
-    <div
-        className="absolute h-[100px] bottom-0 right-0 left-0 bg-gradient-to-b from-transparent 
+export const TypeCardHorizontal = ({ data, rankingPage }) => (
+    <div>
+        {rankingPage && (
+            <h1
+                className={`absolute top-[-26px] left-2 text-[30px] 
+                        bg-gradient-to-b from-amber-500 to-red-500 bg-clip-text text-transparent h-full md:h-[30px] flex items-center
+                        ${
+                            data === 1
+                                ? "md:text-[60px] md:h-full md:top-[-40px] xl:top-[-80px] lg:top-[-50px]"
+                                : "md:text-[26px] md:top-1 lg:text-[35px] lg:top-3 lg:left-3"
+                        }`}
+            >
+                {data.rank}
+            </h1>
+        )}
+        <div
+            className="absolute h-[100px] bottom-0 right-0 left-0 bg-gradient-to-b from-transparent 
 to-black text-white lg:p-3 group-hover:to-cyan-900 px-1"
-    >
-        <h3 className="xl:text-[16px] xl:mb-1 lg:mt-[36px] text-sm truncate mt-[60px] md:mt-14">
-            {data.title}
-        </h3>
-        <div className="flex justify-between items-center font-thin text-[10px] md:text-[12px]">
-            <p className="block xl:w-[135px] w-[72px] truncate">
-                Tập {data?.episodes} - {data.title_synonyms?.[0] || "No title"}
-            </p>
-            <span>{data.favorites} lượt xem</span>
+        >
+            <h3 className="xl:text-[16px] xl:mb-1 lg:mt-[36px] text-sm truncate mt-[60px] md:mt-14">
+                {data.title}
+            </h3>
+            <div className="flex justify-between items-center font-thin text-[10px] md:text-[12px]">
+                <p className="block xl:w-[135px] w-[72px] truncate">
+                    Tập {data?.episodes} -{" "}
+                    {data.title_synonyms?.[0] || "No title"}
+                </p>
+                <span>{data.favorites} lượt xem</span>
+            </div>
         </div>
     </div>
 );
@@ -49,7 +65,7 @@ export const TypeCardVertical = ({ data }) => (
     <div
         className="absolute w-full bottom-0 text-white text-sm lg:text-[16px] h-[100px]
                 bg-gradient-to-b from-transparent to-black px-[5px] lg:px-3
-                group-hover:to-teal-900"
+                group-hover:to-orange-900"
     >
         <div
             className="w-[144px] md:w-[112px] lg:w-auto mt-[34px] 

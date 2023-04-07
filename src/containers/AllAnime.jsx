@@ -4,7 +4,7 @@ import { useAllAnime } from "../hooks";
 
 function AllAnime() {
     const [allAnime] = useAllAnime();
-    const allAnimeList = allAnime?.splice(0, 12);
+    const allAnimeList = allAnime?.filter((item, index) => index <= 11);
 
     return (
         <Layout title="tất cả anime" className={formLayout.layout_1}>
