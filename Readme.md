@@ -152,3 +152,7 @@ Ngày bắt đầu: 22/1/2023
 # Ngày 38
 
     _Fix call API
+
+# Ngày 39
+
+    _Loading component and fix title when direct to another page

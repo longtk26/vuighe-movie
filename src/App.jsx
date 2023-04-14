@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Header, Theme } from "./components";
-import { Home, Rank, Movie } from "./pages";
+import { Home, Rank, Movie, Anime } from "./pages";
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -23,6 +23,7 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/bang-xep-hang" element={<Rank />} />
                             <Route path="/movie" element={<Movie />} />
+                            <Route path="/anime" element={<Anime />} />
                         </Routes>
                     </Theme>
                 </QueryClientProvider>

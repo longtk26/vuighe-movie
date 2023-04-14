@@ -3,7 +3,6 @@ import { animated } from "@react-spring/web";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoIosFilm } from "react-icons/io";
 import { HiNewspaper, HiChartBar } from "react-icons/hi";
-import { BsFillBookFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 import logo from "../../assets";
@@ -51,12 +50,10 @@ function NavbarLeft({ onShow, style }) {
                     <NavbarLink Icon={IoIosFilm} path="anime">
                         Anime
                     </NavbarLink>
-                    <NavbarLink Icon={HiNewspaper} path="tin-tuc">
-                        Tin tức
+                    <NavbarLink Icon={HiNewspaper} path="movie">
+                        Movie
                     </NavbarLink>
-                    <NavbarLink Icon={BsFillBookFill} path="truyen-tranh">
-                        Truyện
-                    </NavbarLink>
+
                     <NavbarLink Icon={HiChartBar} path="bang-xep-hang">
                         BXH
                     </NavbarLink>
