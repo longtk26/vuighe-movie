@@ -6,3 +6,4 @@ export { default as useAnimeToday } from "./useAnimeToday";
 export { default as useAllAnime } from "./useAllAnime";
 export { default as useAnimeSearch } from "./useAnimeSearch";
 export { default as useDebounce } from "./useDebounce";
+export { default as useTheme } from "./useTheme";

@@ -1,18 +1,14 @@
 import { createContext, useState } from "react";
+import { useTheme } from "../../hooks";
 
 const ThemeContext = createContext();
 
 function Theme({ children }) {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("system");
     const value = [theme, setTheme];
-    const htmlElment = document.documentElement;
-    if (theme === "light") {
-        htmlElment.classList.add(theme);
-        htmlElment.classList.remove("dark");
-    } else {
-        htmlElment.classList.add(theme);
-        htmlElment.classList.remove("light");
-    }
+
+    //Just call to choose theme
+    useTheme(theme);
 
     return (
         <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

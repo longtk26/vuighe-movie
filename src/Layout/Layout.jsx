@@ -9,12 +9,15 @@ function Layout({ title, className, children }) {
 
 export default Layout;
 
+//Layyout_1 and children_1 for all anime field and new episodes field
 export const layout_1 =
     "grid md:grid-cols-4 grid-rows-3 gap-2 h-auto grid-cols-2";
 
+//Layout_2 for Collections field and Ranking fiels, children_2 only for collections
 export const layout_2 =
     "md:grid md:grid-cols-6 snap-x snap-mandatory md:grid-rows-2 gap-2 lg:gap-3 flex overflow-x-scroll scrollbar-none";
 
+//Layout_3 and children_3 for Anime Movie and What see today
 export const layout_3 =
     "md:grid md:grid-cols-6 snap-x snap-mandatory flex gap-3 overflow-x-scroll scrollbar-none";
 
