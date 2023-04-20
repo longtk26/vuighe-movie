@@ -4,7 +4,7 @@ import { useTheme } from "../../hooks";
 const ThemeContext = createContext();
 
 function Theme({ children }) {
-    const [theme, setTheme] = useState("system");
+    const [theme, setTheme] = useState("light");
     const value = [theme, setTheme];
 
     //Just call to choose theme

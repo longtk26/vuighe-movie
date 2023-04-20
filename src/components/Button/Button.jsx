@@ -19,8 +19,8 @@ function Button({ path, Icon, circle, user, hover, children }) {
         `;
 
     //Pass circle to define only iconSun that can be clicked
-    const handleTheme = (circle) => {
-        if (circle) {
+    const handleTheme = ({ circle, hover }) => {
+        if (circle && hover) {
             setTheme((preTheme) => {
                 if (preTheme === "light") {
                     return "dark";
@@ -34,7 +34,7 @@ function Button({ path, Icon, circle, user, hover, children }) {
         <Tag
             to={path}
             className={circle ? classCircle : classDefault}
-            onClick={() => handleTheme(circle)}
+            onClick={() => handleTheme({ circle, hover })}
         >
             {children || (
                 <Icon
